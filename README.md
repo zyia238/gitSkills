@@ -1,1 +1,1 @@
-# getSkills
+# gitSkills
