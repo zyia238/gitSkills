@@ -6,23 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rinko Focus</title>
-    <link rel="stylesheet" href="css/rinko.css">
-    <script src="js/rinko.js"></script>
-    <script src="js/slide.js"></script>
+    <!-- 引入swiper的css文件 -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- 引入swiper的js文件 -->
+    <script src="js/swiper.min.js"></script>
+    <style>
+        html, body {
+          position: relative;
+          height: 100%;
+        }
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color:#000;
+          margin: 0;
+          padding: 0;
+        }
+        .swiper-container {
+          width: 224px;
+          height: 126px;
+        }
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
     
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+      </style>
 </head>
 
 <body>
-    <div class="focus">
-        <a href="javascript:;">←</a><a href="javascript:;">→</a>
-        <ul>
-            <li><a href="javascript:;"><img src="../../../img/rinko1.png" alt=""></a></li>
-            <li><a href="javascript:;"><img src="../../../img/rinko2.png" alt=""></a></li>
-            <li><a href="javascript:;"><img src="../../../img/rinko3.png" alt=""></a></li>
-        </ul>
-        <ol>
-        </ol>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="javascript:;"><img src="../../../img/rinko1.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="javascript:;"><img src="../../../img/rinko2.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="javascript:;"><img src="../../../img/rinko3.png" alt=""></a></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
 </body>
 
 </html>
